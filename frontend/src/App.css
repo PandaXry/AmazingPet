@@ -1,34 +1,28 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Remove default center alignment */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Custom selection color */
+::selection {
+  background-color: #0f172a;
+  color: #ffffff;
 }
 
-.App-link {
-    color: #61dafb;
+/* Focus visible styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #0f172a;
+  outline-offset: 2px;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Prevent layout shift from scrollbar */
+html {
+  overflow-y: scroll;
 }
