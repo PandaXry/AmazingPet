@@ -112,7 +112,7 @@ const HowItWorksPage = () => {
                     <div className="text-6xl font-bold text-slate-100 mb-4" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
                       {step.number}
                     </div>
-                    <div className="text-slate-900 mb-4">{step.icon}</div>
+                    <div className="text-[#DE9344] mb-4">{step.icon}</div>
                     <h2
                       className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-4"
                       style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
@@ -262,7 +262,7 @@ const HowItWorksPage = () => {
             <Link
               to="/contact"
               data-testid="how-it-works-cta-btn"
-              className="bg-slate-900 text-white hover:bg-slate-800 rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="bg-[#DE9344] text-white hover:bg-[#C67D2E] rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               Book a Demo
             </Link>

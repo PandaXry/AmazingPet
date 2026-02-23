@@ -107,7 +107,7 @@ const HomePage = () => {
                 <Link
                   to="/contact"
                   data-testid="book-demo-button"
-                  className="bg-slate-900 text-white hover:bg-slate-800 rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] text-center"
+                  className="bg-[#DE9344] text-white hover:bg-[#C67D2E] rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] text-center"
                 >
                   Book a Demo
                 </Link>
@@ -162,7 +162,7 @@ const HomePage = () => {
               {/* Floating Badge */}
               <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl p-6 shadow-lg border border-slate-100">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-[#DE9344] rounded-full flex items-center justify-center">
                     <ShieldCheck size={24} weight="duotone" className="text-white" />
                   </div>
                   <div>
@@ -202,7 +202,7 @@ const HomePage = () => {
                 className={`${feature.span} bg-white border border-slate-100 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group`}
                 data-testid={`feature-card-${index}`}
               >
-                <div className="text-slate-900 mb-4 group-hover:scale-110 transition-transform">
+                <div className="text-[#DE9344] mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900 mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
@@ -307,7 +307,7 @@ const HomePage = () => {
               <Link
                 to="/contact"
                 data-testid="final-book-demo-button"
-                className="bg-slate-900 text-white hover:bg-slate-800 rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="bg-[#DE9344] text-white hover:bg-[#C67D2E] rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 Book a Demo
               </Link>

@@ -43,7 +43,7 @@ const CompliancePage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="w-20 h-20 bg-slate-900 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-[#DE9344] rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <ShieldCheck size={48} weight="duotone" className="text-white" />
               </div>
               <h1
@@ -78,7 +78,7 @@ const CompliancePage = () => {
                 className="bg-slate-50 border border-slate-200 rounded-2xl p-8"
                 data-testid={`compliance-item-${index}`}
               >
-                <div className="text-slate-900 mb-4">{item.icon}</div>
+                <div className="text-[#DE9344] mb-4">{item.icon}</div>
                 <h3
                   className="text-xl font-semibold text-slate-900 mb-3"
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
@@ -195,7 +195,7 @@ const CompliancePage = () => {
           <Link
             to="/contact"
             data-testid="compliance-contact-btn"
-            className="bg-slate-900 text-white hover:bg-slate-800 rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] inline-block"
+            className="bg-[#DE9344] text-white hover:bg-[#C67D2E] rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] inline-block"
           >
             Contact Compliance Team
           </Link>

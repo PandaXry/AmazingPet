@@ -93,7 +93,7 @@ const ProductPage = () => {
                 <Link
                   to="/contact"
                   data-testid="product-book-demo-btn"
-                  className="bg-slate-900 text-white hover:bg-slate-800 rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
+                  className="bg-[#DE9344] text-white hover:bg-[#C67D2E] rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
                 >
                   Book a Demo
                 </Link>
@@ -149,7 +149,7 @@ const ProductPage = () => {
                 className="bg-slate-50 border border-slate-200 rounded-2xl p-8"
                 data-testid={`capability-${index}`}
               >
-                <div className="text-slate-900 mb-4">{capability.icon}</div>
+                <div className="text-[#DE9344] mb-4">{capability.icon}</div>
                 <h3
                   className="text-xl font-semibold text-slate-900 mb-2"
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
@@ -189,7 +189,7 @@ const ProductPage = () => {
                 className="relative"
               >
                 <div className="bg-white border border-slate-200 rounded-2xl p-6 h-full">
-                  <div className="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-white font-bold mb-4">
+                  <div className="w-12 h-12 bg-[#DE9344] rounded-full flex items-center justify-center text-white font-bold mb-4">
                     {step.step}
                   </div>
                   <h3
@@ -290,7 +290,7 @@ const ProductPage = () => {
             <Link
               to="/contact"
               data-testid="product-final-cta-btn"
-              className="bg-slate-900 text-white hover:bg-slate-800 rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="bg-[#DE9344] text-white hover:bg-[#C67D2E] rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               Contact Us
             </Link>
