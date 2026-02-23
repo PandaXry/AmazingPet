@@ -226,56 +226,7 @@ const ProductPage = () => {
         </section>
       )}
 
-      {/* Coming Next - Show future products */}
-      <section className="py-20 md:py-32 bg-slate-50">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-4xl">
-          <div className="text-center mb-12">
-            <h2
-              className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-4"
-              style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-            >
-              Coming Next
-            </h2>
-            <p className="text-lg text-slate-600">
-              Additional products and AI modules in development.
-            </p>
-          </div>
-          
-          {comingSoonProducts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {comingSoonProducts.map((product, index) => (
-                <motion.div
-                  key={product.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white border border-slate-200 rounded-2xl p-8"
-                >
-                  <div className="inline-block bg-slate-100 text-slate-600 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-                    {product.badge || 'Coming Soon'}
-                  </div>
-                  <h3
-                    className="text-xl font-semibold text-slate-900 mb-2"
-                    style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                  >
-                    {product.name}
-                  </h3>
-                  <p className="text-slate-600 leading-relaxed">{product.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          ) : (
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 text-center">
-              <ChartLineUp size={48} className="text-slate-400 mx-auto mb-4" weight="duotone" />
-              <p className="text-slate-600 leading-relaxed">
-                MiniPro and Pro models, expanded AI analysis capabilities, and additional breeding management 
-                tools will be added as the product line grows.
-              </p>
-            </div>
-          )}
-        </div>
-      </section>
+      {/* Coming Next - Removed since coming soon products now render in main grid */}
 
       {/* Compliance */}
       <section className="py-20 md:py-32">
