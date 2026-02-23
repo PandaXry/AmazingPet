@@ -199,7 +199,7 @@ const HomePage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`${feature.span} bg-white border border-slate-100 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group`}
+                className={`${feature.span} bg-[#FAF8F7] border border-[#F5EFE9] rounded-2xl p-8 hover:shadow-lg hover:border-[#DE9344]/20 transition-all duration-300 hover:-translate-y-1 group`}
                 data-testid={`feature-card-${index}`}
               >
                 <div className="text-[#DE9344] mb-4 group-hover:scale-110 transition-transform">
