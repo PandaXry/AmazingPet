@@ -181,7 +181,7 @@ const ContactPage = () => {
               transition={{ duration: 0.6 }}
               className="lg:col-span-2"
             >
-              <form onSubmit={handleSubmit} className="bg-slate-50 border border-slate-200 rounded-2xl p-8 md:p-12" data-testid="contact-form">
+              <form onSubmit={handleSubmit} className="bg-[#FAF8F7] border border-[#F5EFE9] rounded-2xl p-8 md:p-12" data-testid="contact-form">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <Label htmlFor="name" className="text-slate-900 font-medium mb-2 block">
