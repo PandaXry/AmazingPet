@@ -17,7 +17,7 @@ const HowItWorksPage = () => {
       number: '01',
       title: 'Collect Sample',
       description: 'Use provided collection tools to gather vaginal smear or semen sample. Follow standard collection protocols for your sample type.',
-      icon: <FlaskConical size={40} weight="duotone" />,
+      icon: <Flask size={40} weight="duotone" />,
       details: [
         'Vaginal smear: Use swab or gentle collection method',
         'Semen sample: Fresh collection required',
