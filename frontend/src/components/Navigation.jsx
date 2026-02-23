@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from '@phosphor-icons/react';
+import { List, X } from '@phosphor-icons/react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const Navigation = () => {
@@ -90,7 +90,7 @@ export const Navigation = () => {
             className="lg:hidden p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={24} /> : <List size={24} />}
           </button>
         </div>
       </div>
