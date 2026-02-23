@@ -93,7 +93,7 @@ const ProductPage = () => {
                 <Link
                   to="/contact"
                   data-testid="product-book-demo-btn"
-                  className="bg-[#DE9344] text-white hover:bg-[#C67D2E] rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
+                  className="bg-[#DE9344] text-white hover:bg-[#C57622] active:bg-[#AC671E] rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
                 >
                   Book a Demo
                 </Link>
@@ -290,7 +290,7 @@ const ProductPage = () => {
             <Link
               to="/contact"
               data-testid="product-final-cta-btn"
-              className="bg-[#DE9344] text-white hover:bg-[#C67D2E] rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="bg-[#DE9344] text-white hover:bg-[#C57622] active:bg-[#AC671E] rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               Contact Us
             </Link>

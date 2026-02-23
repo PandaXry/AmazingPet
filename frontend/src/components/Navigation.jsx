@@ -77,7 +77,7 @@ export const Navigation = () => {
             <Link
               to="/contact"
               data-testid="nav-book-demo-btn"
-              className="bg-[#DE9344] text-white hover:bg-[#C67D2E] rounded-full px-6 py-2.5 text-sm font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="bg-[#DE9344] text-white hover:bg-[#C57622] active:bg-[#AC671E] rounded-full px-6 py-2.5 text-sm font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               Book Demo
             </Link>
@@ -122,7 +122,7 @@ export const Navigation = () => {
               ))}
               <Link
                 to="/contact"
-                className="block w-full bg-[#DE9344] text-white text-center rounded-full px-6 py-3 font-semibold mt-4 hover:bg-[#C67D2E] transition-colors"
+                className="block w-full bg-[#DE9344] text-white text-center rounded-full px-6 py-3 font-semibold mt-4 hover:bg-[#C57622] active:bg-[#AC671E] transition-colors"
               >
                 Book Demo
               </Link>

@@ -315,7 +315,7 @@ const ContactPage = () => {
                   type="submit"
                   data-testid="contact-submit-btn"
                   disabled={isSubmitting}
-                  className="w-full bg-[#DE9344] text-white hover:bg-[#C67D2E] rounded-full px-8 py-6 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-[#DE9344] text-white hover:bg-[#C57622] active:bg-[#AC671E] rounded-full px-8 py-6 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     'Sending...'

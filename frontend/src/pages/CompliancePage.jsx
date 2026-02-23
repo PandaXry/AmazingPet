@@ -195,7 +195,7 @@ const CompliancePage = () => {
           <Link
             to="/contact"
             data-testid="compliance-contact-btn"
-            className="bg-[#DE9344] text-white hover:bg-[#C67D2E] rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] inline-block"
+            className="bg-[#DE9344] text-white hover:bg-[#C57622] active:bg-[#AC671E] rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] inline-block"
           >
             Contact Compliance Team
           </Link>
