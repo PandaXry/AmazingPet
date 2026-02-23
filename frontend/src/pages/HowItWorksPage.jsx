@@ -81,7 +81,7 @@ const HowItWorksPage = () => {
                 data-testid="how-it-works-title"
               >
                 Simple 3-Step{' '}
-                <span className="bg-gradient-to-r from-[#C67D2E] to-[#DE9344] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#C57622] to-[#DE9344] bg-clip-text text-transparent">
                   Observation Process
                 </span>
               </h1>

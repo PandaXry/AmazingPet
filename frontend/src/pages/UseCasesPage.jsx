@@ -44,7 +44,7 @@ const UseCasesPage = () => {
                 data-testid="use-cases-title"
               >
                 Supporting Australian{' '}
-                <span className="bg-gradient-to-r from-[#C67D2E] to-[#DE9344] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#C57622] to-[#DE9344] bg-clip-text text-transparent">
                   Breeding Professionals
                 </span>
               </h1>

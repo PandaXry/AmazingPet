@@ -52,7 +52,7 @@ const CompliancePage = () => {
                 data-testid="compliance-title"
               >
                 Compliance &{' '}
-                <span className="bg-gradient-to-r from-[#C67D2E] to-[#DE9344] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#C57622] to-[#DE9344] bg-clip-text text-transparent">
                   Regulatory Standards
                 </span>
               </h1>
