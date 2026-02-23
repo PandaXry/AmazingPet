@@ -26,8 +26,15 @@ module.exports = {
                         primary: {
                                 DEFAULT: 'hsl(var(--primary))',
                                 foreground: 'hsl(var(--primary-foreground))',
-                                dark: 'hsl(var(--primary-dark))',
-                                hex: '#DE9344'
+                                hover: 'hsl(var(--primary-hover))',
+                                active: 'hsl(var(--primary-active))',
+                                light: 'hsl(var(--primary-light))',
+                                medium: 'hsl(var(--primary-medium))',
+                                hex: '#DE9344',
+                                'hex-hover': '#C57622',
+                                'hex-active': '#AC671E',
+                                'hex-light': '#FAF8F7',
+                                'hex-medium': '#F5EFE9'
                         },
                         secondary: {
                                 DEFAULT: 'hsl(var(--secondary))',
