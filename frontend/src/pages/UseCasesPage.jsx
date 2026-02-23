@@ -80,7 +80,7 @@ const UseCasesPage = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center space-x-2 mb-4">
-                <Heart size={32} weight="duotone" className="text-slate-900" />
+                <Heart size={32} weight="duotone" className="text-[#DE9344]" />
                 <span className="text-sm text-slate-500 font-medium uppercase tracking-wider">For Breeders</span>
               </div>
               <h2
@@ -105,7 +105,7 @@ const UseCasesPage = () => {
 
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
                 <div className="flex items-start space-x-3">
-                  <TrendUp size={24} className="text-slate-900 flex-shrink-0" weight="duotone" />
+                  <TrendUp size={24} className="text-[#DE9344] flex-shrink-0" weight="duotone" />
                   <div>
                     <h4 className="font-semibold text-slate-900 mb-2">Cost & Time Efficiency</h4>
                     <p className="text-slate-600 text-sm leading-relaxed">
@@ -142,7 +142,7 @@ const UseCasesPage = () => {
               className="order-2 lg:order-1"
             >
               <div className="flex items-center space-x-2 mb-4">
-                <Storefront size={32} weight="duotone" className="text-slate-900" />
+                <Storefront size={32} weight="duotone" className="text-[#DE9344]" />
                 <span className="text-sm text-slate-500 font-medium uppercase tracking-wider">For Groomers</span>
               </div>
               <h2
@@ -167,7 +167,7 @@ const UseCasesPage = () => {
 
               <div className="bg-white border border-slate-200 rounded-xl p-6">
                 <div className="flex items-start space-x-3">
-                  <Users size={24} className="text-slate-900 flex-shrink-0" weight="duotone" />
+                  <Users size={24} className="text-[#DE9344] flex-shrink-0" weight="duotone" />
                   <div>
                     <h4 className="font-semibold text-slate-900 mb-2">Demo Day Workflow</h4>
                     <p className="text-slate-600 text-sm leading-relaxed">

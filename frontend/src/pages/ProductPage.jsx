@@ -216,7 +216,7 @@ const ProductPage = () => {
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-4xl">
           <div className="bg-white border border-slate-200 rounded-2xl p-8 md:p-12">
             <div className="flex items-start space-x-4">
-              <Package size={32} className="text-slate-900 flex-shrink-0" weight="duotone" />
+              <Package size={32} className="text-[#DE9344] flex-shrink-0" weight="duotone" />
               <div>
                 <h3
                   className="text-2xl font-semibold text-slate-900 mb-4"

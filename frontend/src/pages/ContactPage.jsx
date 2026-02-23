@@ -131,7 +131,7 @@ const ContactPage = () => {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin size={24} className="text-slate-900" weight="duotone" />
+                    <MapPin size={24} className="text-[#DE9344]" weight="duotone" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Location</h3>
@@ -141,7 +141,7 @@ const ContactPage = () => {
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <EnvelopeSimple size={24} className="text-slate-900" weight="duotone" />
+                    <EnvelopeSimple size={24} className="text-[#DE9344]" weight="duotone" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Email</h3>
@@ -156,7 +156,7 @@ const ContactPage = () => {
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <CalendarCheck size={24} className="text-slate-900" weight="duotone" />
+                    <CalendarCheck size={24} className="text-[#DE9344]" weight="duotone" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Response Time</h3>
