@@ -6,6 +6,7 @@ import { Navigation } from "./components/Navigation";
 import { Footer } from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 import UseCasesPage from "./pages/UseCasesPage";
 import HowItWorksPage from "./pages/HowItWorksPage";
 import CompliancePage from "./pages/CompliancePage";
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/product" element={<ProductPage />} />
+          <Route path="/products/:productId" element={<ProductDetailPage />} />
           <Route path="/use-cases" element={<UseCasesPage />} />
           <Route path="/use-cases/breeders" element={<UseCasesPage />} />
           <Route path="/use-cases/groomers" element={<UseCasesPage />} />
