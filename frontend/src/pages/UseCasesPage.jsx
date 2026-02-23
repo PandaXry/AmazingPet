@@ -103,7 +103,7 @@ const UseCasesPage = () => {
                 ))}
               </div>
 
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
+              <div className="bg-[#FAF8F7] border border-[#F5EFE9] rounded-xl p-6">
                 <div className="flex items-start space-x-3">
                   <TrendUp size={24} className="text-[#DE9344] flex-shrink-0" weight="duotone" />
                   <div>
@@ -165,7 +165,7 @@ const UseCasesPage = () => {
                 ))}
               </div>
 
-              <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <div className="bg-[#FAF8F7] border border-[#F5EFE9] rounded-xl p-6">
                 <div className="flex items-start space-x-3">
                   <Users size={24} className="text-[#DE9344] flex-shrink-0" weight="duotone" />
                   <div>

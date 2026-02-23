@@ -146,7 +146,7 @@ const ProductPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-50 border border-slate-200 rounded-2xl p-8"
+                className="bg-[#FAF8F7] border border-[#F5EFE9] rounded-2xl p-8 hover:border-[#DE9344]/20 transition-colors"
                 data-testid={`capability-${index}`}
               >
                 <div className="text-[#DE9344] mb-4">{capability.icon}</div>

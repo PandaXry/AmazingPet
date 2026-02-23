@@ -75,7 +75,7 @@ const CompliancePage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-50 border border-slate-200 rounded-2xl p-8"
+                className="bg-[#FAF8F7] border border-[#F5EFE9] rounded-2xl p-8"
                 data-testid={`compliance-item-${index}`}
               >
                 <div className="text-[#DE9344] mb-4">{item.icon}</div>
@@ -151,7 +151,7 @@ const CompliancePage = () => {
             >
               Australian Market Compliance Roadmap
             </h2>
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8">
+            <div className="bg-[#FAF8F7] border border-[#F5EFE9] rounded-2xl p-8">
               <div className="space-y-6">
                 <div>
                   <h4 className="font-semibold text-slate-900 mb-2">Current Status (2026 Entry)</h4>
