@@ -42,7 +42,7 @@ export const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center group" data-testid="nav-logo">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
+              <div className="w-10 h-10 bg-[#DE9344] rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
                 <span className="text-white font-bold text-xl">AP</span>
               </div>
               <div className="hidden md:block">
@@ -77,7 +77,7 @@ export const Navigation = () => {
             <Link
               to="/contact"
               data-testid="nav-book-demo-btn"
-              className="bg-slate-900 text-white hover:bg-slate-800 rounded-full px-6 py-2.5 text-sm font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="bg-[#DE9344] text-white hover:bg-[#C67D2E] rounded-full px-6 py-2.5 text-sm font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               Book Demo
             </Link>
@@ -122,7 +122,7 @@ export const Navigation = () => {
               ))}
               <Link
                 to="/contact"
-                className="block w-full bg-slate-900 text-white text-center rounded-full px-6 py-3 font-semibold mt-4"
+                className="block w-full bg-[#DE9344] text-white text-center rounded-full px-6 py-3 font-semibold mt-4 hover:bg-[#C67D2E] transition-colors"
               >
                 Book Demo
               </Link>

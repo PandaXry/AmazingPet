@@ -10,7 +10,7 @@ export const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-[#DE9344] rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">AP</span>
               </div>
               <div>
