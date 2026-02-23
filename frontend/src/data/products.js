@@ -59,22 +59,37 @@ export const products = [
       other: 'Standard microscopy slides work for vaginal cytology and general observations.',
       note: 'All consumables are available through our AU distribution channels.'
     }
+  },
+  {
+    id: 'amazing-pet-mini-pro',
+    name: 'Amazing Pet MINI PRO',
+    description: 'Compact version designed for mobile and small-scale use. Perfect for breeders and groomers who need portability without sacrificing observation quality.',
+    image: 'https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    badge: 'Coming Soon',
+    ctaText: 'Learn More',
+    learnMoreLink: '/contact',
+    status: 'coming-soon'
+  },
+  {
+    id: 'amazing-pet-pro',
+    name: 'Amazing Pet PRO',
+    description: 'Enhanced performance and expanded AI analysis capacity. Advanced features for professional breeders requiring comprehensive observation capabilities and faster processing.',
+    image: 'https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    badge: 'Coming Soon',
+    ctaText: 'Learn More',
+    learnMoreLink: '/contact',
+    status: 'coming-soon'
+  },
+  {
+    id: 'amazing-pet-promax',
+    name: 'Amazing Pet PROMAX',
+    description: 'Full-capability flagship system for high-frequency and professional use. Enterprise-grade solution with maximum throughput, advanced analytics, and comprehensive integration options.',
+    image: 'https://images.pexels.com/photos/8853589/pexels-photo-8853589.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    badge: 'Coming Soon',
+    ctaText: 'Learn More',
+    learnMoreLink: '/contact',
+    status: 'coming-soon'
   }
-  // Future products will be added here:
-  // {
-  //   id: 'amazing-pet-mini-pro',
-  //   name: 'Amazing Pet MiniPro',
-  //   description: '...',
-  //   badge: 'Coming Soon',
-  //   status: 'coming-soon'
-  // },
-  // {
-  //   id: 'amazing-pet-pro',
-  //   name: 'Amazing Pet Pro',
-  //   description: '...',
-  //   badge: 'Coming Soon',
-  //   status: 'coming-soon'
-  // }
 ];
 
 // Helper function to get product by ID
