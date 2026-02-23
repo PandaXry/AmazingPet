@@ -46,11 +46,11 @@ export const ProductCard = ({ product, index = 0 }) => {
         {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
-            to={product.learnMoreLink || '/contact'}
+            to={`/products/${product.id.replace('amazing-pet-', '')}`}
             data-testid={`product-learn-more-${product.id}`}
             className="bg-[#DE9344] text-white hover:bg-[#C57622] active:bg-[#AC671E] rounded-full px-6 py-3 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] inline-flex items-center justify-center space-x-2"
           >
-            <span>{product.ctaText || 'Learn More'}</span>
+            <span>View Details</span>
             <ArrowRight size={18} weight="bold" />
           </Link>
           
