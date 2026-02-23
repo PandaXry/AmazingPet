@@ -62,12 +62,39 @@ const ProductPage = () => {
             </motion.div>
           </div>
 
-          {/* Render Available Products */}
-          <div className="space-y-20">
-            {availableProducts.map((product, index) => (
-              <ProductCard key={product.id} product={product} index={index} />
-            ))}
-          </div>
+          {/* Render Available Products in Grid */}
+          {availableProducts.length > 0 && (
+            <div className="mb-20">
+              <h2 
+                className="text-2xl md:text-3xl font-semibold tracking-tight text-slate-900 mb-8 text-center"
+                style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+              >
+                Available Now
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                {availableProducts.map((product, index) => (
+                  <ProductCard key={product.id} product={product} index={index} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Render Coming Soon Products in Grid */}
+          {comingSoonProducts.length > 0 && (
+            <div>
+              <h2 
+                className="text-2xl md:text-3xl font-semibold tracking-tight text-slate-900 mb-8 text-center"
+                style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+              >
+                Coming Soon
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                {comingSoonProducts.map((product, index) => (
+                  <ProductCard key={product.id} product={product} index={index} />
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
