@@ -28,7 +28,10 @@ code {
         --popover-foreground: 0 0% 3.9%;
         --primary: 27 69% 57%;
         --primary-foreground: 0 0% 98%;
-        --primary-dark: 27 69% 47%;
+        --primary-hover: 27 70% 45%;
+        --primary-active: 27 70% 40%;
+        --primary-light: 27 35% 97.5%;
+        --primary-medium: 27 55% 94%;
         --secondary: 0 0% 96.1%;
         --secondary-foreground: 0 0% 9%;
         --muted: 0 0% 96.1%;
@@ -47,7 +50,10 @@ code {
         --chart-5: 27 87% 67%;
         --radius: 0.5rem;
         --color-primary: #DE9344;
-        --color-primary-dark: #C67D2E;
+        --color-primary-hover: #C57622;
+        --color-primary-active: #AC671E;
+        --color-primary-light: #FAF8F7;
+        --color-primary-medium: #F5EFE9;
     }
     .dark {
         --background: 0 0% 3.9%;
