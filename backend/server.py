@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter, HTTPException
+from fastapi import FastAPI, APIRouter, HTTPException, Header
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -23,6 +23,9 @@ db = client[os.environ['DB_NAME']]
 # Resend configuration
 resend.api_key = os.environ.get('RESEND_API_KEY', '')
 SENDER_EMAIL = os.environ.get('SENDER_EMAIL', 'onboarding@resend.dev')
+
+# Admin API key
+ADMIN_API_KEY = os.environ.get('ADMIN_API_KEY', '')
 
 # Create the main app without a prefix
 app = FastAPI()
@@ -218,6 +221,20 @@ def generate_internal_notification_email(form_data: dict) -> str:
     """
 
 
+# ============ Admin Security ============
+
+async def verify_admin_key(x_admin_key: Optional[str] = Header(None)):
+    """Verify admin API key from x-admin-key header"""
+    if not ADMIN_API_KEY:
+        # If no admin key configured, deny access for security
+        raise HTTPException(status_code=401, detail={"error": "unauthorized"})
+    
+    if not x_admin_key or x_admin_key != ADMIN_API_KEY:
+        raise HTTPException(status_code=401, detail={"error": "unauthorized"})
+    
+    return True
+
+
 # ============ API Endpoints ============
 
 @api_router.get("/")
@@ -393,8 +410,11 @@ async def handle_crm_webhook(payload: CRMWebhookPayload):
         raise HTTPException(status_code=500, detail="Failed to process webhook")
 
 @api_router.get("/contacts", response_model=List[ContactFormResponse])
-async def get_contacts(limit: int = 50):
-    """Retrieve contact submissions (admin endpoint)"""
+async def get_contacts(limit: int = 50, _: bool = Header(None, alias="x-admin-key", include_in_schema=False)):
+    """Retrieve contact submissions (admin endpoint - requires x-admin-key header)"""
+    # Verify admin authentication
+    await verify_admin_key(_)
+    
     try:
         contacts = await db.contacts.find({}, {"_id": 0}).sort("created_at", -1).limit(limit).to_list(limit)
         return [ContactFormResponse(**contact) for contact in contacts]
