@@ -46,8 +46,8 @@ const ContactPage = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post(`${API}/contact`, formData);
-      
+      await submitContact(formData);
+
       toast.success('Message sent successfully!', {
         description: 'We\'ll get back to you within 24 hours.',
       });
@@ -62,11 +62,15 @@ const ContactPage = () => {
         interest: 'Book Demo',
         message: ''
       });
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      toast.error('Failed to send message', {
-        description: 'Please try again or email us directly.',
-      });
+    } catch (err) {
+      console.error('Error submitting form:', err);
+      if (err.status === 429) {
+        toast.error(err.message);
+      } else {
+        toast.error('Failed to send message', {
+          description: 'Please try again or email us directly.',
+        });
+      }
     } finally {
       setIsSubmitting(false);
     }
