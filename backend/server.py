@@ -377,6 +377,12 @@ async def subscribe_newsletter(subscription: NewsletterSubscription, request: Re
 async def request_booking(booking: BookingRequest, request: Request):
     """Handle demo/meeting booking request"""
     _check_rate_limit(request.client.host, "booking")
+    if booking.website:  # honeypot filled — silent discard
+        return BookingResponse(
+            id=str(uuid.uuid4()), name=booking.name, email=booking.email,
+            company=booking.company, meeting_type=booking.meeting_type,
+            status="pending", created_at=datetime.now(timezone.utc).isoformat(),
+        )
     try:
         booking_id = str(uuid.uuid4())
         booking_doc = {
