@@ -57,7 +57,7 @@ app.add_middleware(
 CORS_ORIGINS="*"
 
 # After
-CORS_ORIGINS="https://amazing-pet-air-au.preview.emergentagent.com,http://localhost:3000"
+CORS_ORIGINS="https://pet-air-staging.preview.emergentagent.com,http://localhost:3000"
 ENVIRONMENT=development
 ```
 
@@ -200,7 +200,7 @@ https://www.amazingpet.com.au
 https://staging.amazingpet.com.au
 
 # Preview/Development
-https://amazing-pet-air-au.preview.emergentagent.com
+https://pet-air-staging.preview.emergentagent.com
 http://localhost:3000
 ```
 

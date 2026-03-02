@@ -69,7 +69,7 @@ async def get_contacts(
 ### Authenticated Request (Success)
 ```bash
 curl -H "x-admin-key: change_this_in_production_12345" \
-  https://amazing-pet-air-au.preview.emergentagent.com/api/contacts
+  https://pet-air-staging.preview.emergentagent.com/api/contacts
 ```
 
 **Response (200 OK):**
@@ -92,7 +92,7 @@ curl -H "x-admin-key: change_this_in_production_12345" \
 
 ### Unauthenticated Request (Failure)
 ```bash
-curl https://amazing-pet-air-au.preview.emergentagent.com/api/contacts
+curl https://pet-air-staging.preview.emergentagent.com/api/contacts
 ```
 
 **Response (401 Unauthorized):**
@@ -107,7 +107,7 @@ curl https://amazing-pet-air-au.preview.emergentagent.com/api/contacts
 ### Wrong Admin Key (Failure)
 ```bash
 curl -H "x-admin-key: wrong_key" \
-  https://amazing-pet-air-au.preview.emergentagent.com/api/contacts
+  https://pet-air-staging.preview.emergentagent.com/api/contacts
 ```
 
 **Response (401 Unauthorized):**
