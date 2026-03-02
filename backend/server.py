@@ -322,8 +322,9 @@ async def submit_contact_form(form: ContactFormSubmission, request: Request):
         raise HTTPException(status_code=500, detail="Failed to submit contact form")
 
 @api_router.post("/newsletter", response_model=NewsletterResponse)
-async def subscribe_newsletter(subscription: NewsletterSubscription):
+async def subscribe_newsletter(subscription: NewsletterSubscription, request: Request):
     """Handle newsletter subscription"""
+    _check_rate_limit(request.client.host, "newsletter")
     try:
         # Check if already subscribed
         existing = await db.newsletter_subscribers.find_one(
