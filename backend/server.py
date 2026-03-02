@@ -410,10 +410,13 @@ async def handle_crm_webhook(payload: CRMWebhookPayload):
         raise HTTPException(status_code=500, detail="Failed to process webhook")
 
 @api_router.get("/contacts", response_model=List[ContactFormResponse])
-async def get_contacts(limit: int = 50, _: bool = Header(None, alias="x-admin-key", include_in_schema=False)):
+async def get_contacts(
+    limit: int = 50,
+    x_admin_key: Optional[str] = Header(None)
+):
     """Retrieve contact submissions (admin endpoint - requires x-admin-key header)"""
     # Verify admin authentication
-    await verify_admin_key(_)
+    await verify_admin_key(x_admin_key)
     
     try:
         contacts = await db.contacts.find({}, {"_id": 0}).sort("created_at", -1).limit(limit).to_list(limit)
