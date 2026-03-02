@@ -539,6 +539,7 @@ async def create_db_indices():
     await db.newsletter_subscribers.create_index("email", unique=True)
     await db.contacts.create_index([("created_at", -1)])
     await db.bookings.create_index([("created_at", -1)])
+    await db.bookings.create_index("email")
     logger.info("MongoDB indices ensured")
 
 
