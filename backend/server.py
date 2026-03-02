@@ -95,6 +95,7 @@ class BookingRequest(BaseModel):
     preferred_time: Optional[str] = None
     meeting_type: Literal["Demo", "Coffee Chat", "Technical Consultation"] = "Demo"
     notes: Optional[str] = Field(None, max_length=1000)
+    website: Optional[str] = None  # honeypot
 
 class BookingResponse(BaseModel):
     model_config = ConfigDict(extra="ignore")
