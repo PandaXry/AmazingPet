@@ -55,6 +55,7 @@ class ContactFormSubmission(BaseModel):
     message: str = Field(..., min_length=1, max_length=2000)
     lead_type: Literal["Breeder", "Groomer", "Distributor", "Clinic", "Other"] = "Other"
     interest: Literal["Book Demo", "General Inquiry", "Partnership", "Pricing"] = "General Inquiry"
+    website: Optional[str] = None  # honeypot — must remain empty for real users
 
 class ContactFormResponse(BaseModel):
     model_config = ConfigDict(extra="ignore")
