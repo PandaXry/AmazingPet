@@ -224,6 +224,28 @@ def generate_internal_notification_email(form_data: dict) -> str:
     """
 
 
+# ============ Rate Limiting (in-memory sliding window) ============
+
+_rl_store: dict = defaultdict(list)
+_RL_MAX = 5       # requests
+_RL_WINDOW = 60   # seconds
+
+
+def _check_rate_limit(ip: str, endpoint: str) -> None:
+    """Raise 429 if the IP has exceeded _RL_MAX requests in the last _RL_WINDOW seconds."""
+    key = f"{ip}:{endpoint}"
+    now = time.monotonic()
+    cutoff = now - _RL_WINDOW
+    _rl_store[key] = [t for t in _rl_store[key] if t > cutoff]
+    if len(_rl_store[key]) >= _RL_MAX:
+        raise HTTPException(
+            status_code=429,
+            headers={"Retry-After": str(_RL_WINDOW)},
+            detail={"error": "too_many_requests", "retry_after": _RL_WINDOW},
+        )
+    _rl_store[key].append(now)
+
+
 # ============ Admin Security ============
 
 async def verify_admin_key(x_admin_key: Optional[str] = Header(None)):
