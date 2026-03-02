@@ -508,6 +508,15 @@ app.add_middleware(
     allow_headers=["Content-Type", "x-admin-key"],
 )
 
+@app.on_event("startup")
+async def create_db_indices():
+    """Create MongoDB indices on startup for query performance."""
+    await db.newsletter_subscribers.create_index("email", unique=True)
+    await db.contacts.create_index([("created_at", -1)])
+    await db.bookings.create_index([("created_at", -1)])
+    logger.info("MongoDB indices ensured")
+
+
 @app.on_event("shutdown")
 async def shutdown_db_client():
     client.close()
