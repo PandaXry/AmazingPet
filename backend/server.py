@@ -34,6 +34,15 @@ ADMIN_API_KEY = os.environ.get('ADMIN_API_KEY', '')
 # Create the main app without a prefix
 app = FastAPI()
 
+
+@app.exception_handler(_RateLimitExceeded)
+async def _rate_limit_handler(request: Request, exc: _RateLimitExceeded):
+    return JSONResponse(
+        status_code=429,
+        headers={"Retry-After": str(_RL_WINDOW)},
+        content={"error": "too_many_requests", "retry_after": _RL_WINDOW},
+    )
+
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
 
