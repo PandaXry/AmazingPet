@@ -281,6 +281,13 @@ async def root():
 async def submit_contact_form(form: ContactFormSubmission, request: Request):
     """Handle contact form submission with lead routing"""
     _check_rate_limit(request.client.host, "contact")
+    if form.website:  # honeypot filled — silent discard
+        return ContactFormResponse(
+            id=str(uuid.uuid4()), name=form.name, email=form.email,
+            company=form.company, phone=form.phone, message=form.message,
+            lead_type=form.lead_type, interest=form.interest,
+            status="new", created_at=datetime.now(timezone.utc).isoformat(),
+        )
     try:
         # Create contact record
         contact_id = str(uuid.uuid4())
