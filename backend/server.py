@@ -258,6 +258,15 @@ def _check_rate_limit(ip: str, endpoint: str) -> None:
     _rl_store[key].append(now)
 
 
+@app.exception_handler(_RateLimitExceeded)
+async def _rate_limit_handler(request: Request, exc: _RateLimitExceeded):
+    return JSONResponse(
+        status_code=429,
+        headers={"Retry-After": str(_RL_WINDOW)},
+        content={"error": "too_many_requests", "retry_after": _RL_WINDOW},
+    )
+
+
 # ============ Admin Security ============
 
 async def verify_admin_key(x_admin_key: Optional[str] = Header(None)):
