@@ -20,9 +20,6 @@ import {
   SelectValue,
 } from '../components/ui/select';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
