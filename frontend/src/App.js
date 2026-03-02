@@ -11,6 +11,7 @@ import UseCasesPage from "./pages/UseCasesPage";
 import HowItWorksPage from "./pages/HowItWorksPage";
 import CompliancePage from "./pages/CompliancePage";
 import ContactPage from "./pages/ContactPage";
+import BookingPage from "./pages/BookingPage";
 
 function App() {
   return (
