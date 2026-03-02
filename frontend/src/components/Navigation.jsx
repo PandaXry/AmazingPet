@@ -75,7 +75,7 @@ export const Navigation = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-3">
             <Link
-              to="/contact"
+              to="/book-demo"
               data-testid="nav-book-demo-btn"
               className="bg-[#DE9344] text-white hover:bg-[#C57622] active:bg-[#AC671E] rounded-full px-6 py-2.5 text-sm font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
@@ -121,7 +121,7 @@ export const Navigation = () => {
                 </Link>
               ))}
               <Link
-                to="/contact"
+                to="/book-demo"
                 className="block w-full bg-[#DE9344] text-white text-center rounded-full px-6 py-3 font-semibold mt-4 hover:bg-[#C57622] active:bg-[#AC671E] transition-colors"
               >
                 Book Demo
