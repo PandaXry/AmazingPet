@@ -355,8 +355,9 @@ async def subscribe_newsletter(subscription: NewsletterSubscription, request: Re
         raise HTTPException(status_code=500, detail="Failed to subscribe")
 
 @api_router.post("/booking", response_model=BookingResponse)
-async def request_booking(booking: BookingRequest):
+async def request_booking(booking: BookingRequest, request: Request):
     """Handle demo/meeting booking request"""
+    _check_rate_limit(request.client.host, "booking")
     try:
         booking_id = str(uuid.uuid4())
         booking_doc = {
