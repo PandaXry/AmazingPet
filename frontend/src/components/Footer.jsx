@@ -110,8 +110,41 @@ export const Footer = () => {
           </div>
         </div>
 
+        {/* Newsletter signup */}
+        <div className="border-t border-slate-200 mt-12 pt-8 mb-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <p className="font-semibold text-slate-900 text-sm">Stay updated</p>
+              <p className="text-slate-500 text-sm">Product news and industry insights.</p>
+            </div>
+            <form
+              onSubmit={handleNewsletterSubmit}
+              className="flex gap-2 w-full md:w-auto"
+              data-testid="newsletter-form"
+            >
+              <input
+                type="email"
+                required
+                value={nlEmail}
+                onChange={(e) => setNlEmail(e.target.value)}
+                placeholder="your@email.com"
+                data-testid="newsletter-email-input"
+                className="flex-1 md:w-56 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#DE9344]/40"
+              />
+              <button
+                type="submit"
+                disabled={nlSubmitting}
+                data-testid="newsletter-submit-btn"
+                className="rounded-full bg-[#DE9344] px-5 py-2 text-sm font-semibold text-white hover:bg-[#C57622] active:bg-[#AC671E] transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+              >
+                {nlSubmitting ? 'Subscribing…' : 'Subscribe'}
+              </button>
+            </form>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="border-t border-slate-200 mt-12 pt-8">
+        <div className="border-t border-slate-200 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-slate-500 text-sm">
               © {new Date().getFullYear()} Amazing Pet Australia. All rights reserved.
