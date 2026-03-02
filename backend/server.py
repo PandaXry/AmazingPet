@@ -75,6 +75,7 @@ class NewsletterSubscription(BaseModel):
     """Newsletter signup"""
     email: EmailStr
     source_page: Optional[str] = "home"
+    website: Optional[str] = None  # honeypot
 
 class NewsletterResponse(BaseModel):
     model_config = ConfigDict(extra="ignore")
