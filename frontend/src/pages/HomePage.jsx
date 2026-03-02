@@ -105,7 +105,7 @@ const HomePage = () => {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8" data-testid="hero-cta-buttons">
                 <Link
-                  to="/contact"
+                  to="/book-demo"
                   data-testid="book-demo-button"
                   className="bg-[#DE9344] text-white hover:bg-[#C57622] active:bg-[#AC671E] rounded-full px-8 py-4 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] text-center"
                 >
