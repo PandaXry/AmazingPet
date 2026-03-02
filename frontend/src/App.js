@@ -28,6 +28,7 @@ function App() {
           <Route path="/how-it-works" element={<HowItWorksPage />} />
           <Route path="/compliance" element={<CompliancePage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/book-demo" element={<BookingPage />} />
         </Routes>
         <Footer />
         <Toaster position="top-right" />
