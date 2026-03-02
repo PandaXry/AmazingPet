@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { EnvelopeSimple, MapPin, Phone } from '@phosphor-icons/react';
+import { EnvelopeSimple, MapPin } from '@phosphor-icons/react';
+import { toast } from 'sonner';
+import { subscribeNewsletter } from '../services/apiClient';
 
 export const Footer = () => {
+  const [nlEmail, setNlEmail] = useState('');
+  const [nlSubmitting, setNlSubmitting] = useState(false);
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    setNlSubmitting(true);
+    try {
+      await subscribeNewsletter({ email: nlEmail });
+      toast.success('Subscribed!', { description: "You're now on our updates list." });
+      setNlEmail('');
+    } catch (err) {
+      if (err.status === 429) {
+        toast.error(err.message);
+      } else {
+        toast.error('Subscription failed', { description: 'Please try again.' });
+      }
+    } finally {
+      setNlSubmitting(false);
+    }
+  };
   return (
     <footer className="bg-slate-50 border-t border-slate-100" data-testid="footer">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl py-12 md:py-16">
