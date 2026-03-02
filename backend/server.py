@@ -140,6 +140,7 @@ async def send_email_async(recipient: str, subject: str, html_content: str):
 
 def generate_contact_confirmation_email(name: str) -> str:
     """Generate HTML for contact confirmation email"""
+    safe_name = _html.escape(name)
     return f"""
     <!DOCTYPE html>
     <html>
@@ -159,7 +160,7 @@ def generate_contact_confirmation_email(name: str) -> str:
                 <h1>Amazing Pet</h1>
             </div>
             <div class="content">
-                <p>Hi {name},</p>
+                <p>Hi {safe_name},</p>
                 <p>Thank you for contacting Amazing Pet. We've received your inquiry and our team will get back to you within 24 hours.</p>
                 <p>We're excited to discuss how our on-site microscopy imaging solutions can support your breeding management needs.</p>
                 <p>Best regards,<br><strong>Amazing Pet Australia Team</strong></p>
