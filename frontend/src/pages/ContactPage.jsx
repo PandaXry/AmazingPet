@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import axios from 'axios';
 import { toast } from 'sonner';
+import { submitContact } from '../services/apiClient';
 import {
   EnvelopeSimple,
   MapPin,
