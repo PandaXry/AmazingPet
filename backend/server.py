@@ -271,8 +271,9 @@ async def root():
     return {"message": "Amazing Pet API v1.0", "status": "operational"}
 
 @api_router.post("/contact", response_model=ContactFormResponse)
-async def submit_contact_form(form: ContactFormSubmission):
+async def submit_contact_form(form: ContactFormSubmission, request: Request):
     """Handle contact form submission with lead routing"""
+    _check_rate_limit(request.client.host, "contact")
     try:
         # Create contact record
         contact_id = str(uuid.uuid4())
