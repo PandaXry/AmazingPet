@@ -437,12 +437,43 @@ async def health_check():
 # Include the router in the main app
 app.include_router(api_router)
 
+# ============ CORS Configuration ============
+
+def configure_cors():
+    """Configure CORS with production-safe defaults"""
+    cors_origins_str = os.environ.get('CORS_ORIGINS', '').strip()
+    environment = os.environ.get('ENVIRONMENT', 'production').lower()
+    
+    # Default to localhost if not specified
+    if not cors_origins_str:
+        logger.warning("CORS_ORIGINS not set, defaulting to http://localhost:3000")
+        cors_origins_str = "http://localhost:3000"
+    
+    # Parse comma-separated origins
+    origins = [origin.strip() for origin in cors_origins_str.split(',') if origin.strip()]
+    
+    # Security: Refuse to start if wildcard in production
+    if '*' in origins:
+        if environment == 'production':
+            logger.error("FATAL: CORS wildcard (*) is not allowed in production mode")
+            logger.error("Set CORS_ORIGINS to specific domain(s) in environment variables")
+            raise ValueError("CORS wildcard (*) not allowed in production. Set CORS_ORIGINS to specific origins.")
+        else:
+            logger.warning("⚠️  WARNING: CORS wildcard (*) detected in non-production environment")
+            logger.warning("⚠️  This allows ANY origin to access your API - use only for development")
+    
+    logger.info(f"CORS enabled for origins: {origins}")
+    return origins
+
+# Configure and apply CORS middleware
+configured_origins = configure_cors()
+
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
-    allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','),
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=configured_origins,
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type", "x-admin-key"],
 )
 
 @app.on_event("shutdown")
