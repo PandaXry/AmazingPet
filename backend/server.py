@@ -175,6 +175,9 @@ def generate_contact_confirmation_email(name: str) -> str:
 
 def generate_internal_notification_email(form_data: dict) -> str:
     """Generate HTML for internal team notification"""
+    def _e(key: str, fallback: str = "N/A") -> str:
+        return _html.escape(str(form_data.get(key) or fallback))
+
     return f"""
     <!DOCTYPE html>
     <html>
@@ -193,31 +196,31 @@ def generate_internal_notification_email(form_data: dict) -> str:
     <body>
         <div class="container">
             <div class="header">
-                <h1>🔔 New Lead: {form_data.get('lead_type', 'General')}</h1>
+                <h1>New Lead: {_e('lead_type', 'General')}</h1>
             </div>
             <div class="field">
                 <div class="label">Interest Type</div>
-                <div class="value"><span class="badge">{form_data.get('interest', 'General Inquiry')}</span></div>
+                <div class="value"><span class="badge">{_e('interest', 'General Inquiry')}</span></div>
             </div>
             <div class="field">
                 <div class="label">Name</div>
-                <div class="value">{form_data.get('name', 'N/A')}</div>
+                <div class="value">{_e('name')}</div>
             </div>
             <div class="field">
                 <div class="label">Email</div>
-                <div class="value">{form_data.get('email', 'N/A')}</div>
+                <div class="value">{_e('email')}</div>
             </div>
             <div class="field">
                 <div class="label">Company</div>
-                <div class="value">{form_data.get('company', 'N/A')}</div>
+                <div class="value">{_e('company')}</div>
             </div>
             <div class="field">
                 <div class="label">Phone</div>
-                <div class="value">{form_data.get('phone', 'N/A')}</div>
+                <div class="value">{_e('phone')}</div>
             </div>
             <div class="field">
                 <div class="label">Message</div>
-                <div class="value">{form_data.get('message', 'N/A')}</div>
+                <div class="value">{_e('message')}</div>
             </div>
         </div>
     </body>
