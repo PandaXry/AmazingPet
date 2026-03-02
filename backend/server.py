@@ -339,6 +339,11 @@ async def submit_contact_form(form: ContactFormSubmission, request: Request):
 async def subscribe_newsletter(subscription: NewsletterSubscription, request: Request):
     """Handle newsletter subscription"""
     _check_rate_limit(request.client.host, "newsletter")
+    if subscription.website:  # honeypot filled — silent discard
+        return NewsletterResponse(
+            id=str(uuid.uuid4()), email=subscription.email,
+            subscribed_at=datetime.now(timezone.utc).isoformat(), status="active",
+        )
     try:
         # Check if already subscribed
         existing = await db.newsletter_subscribers.find_one(
